@@ -8,18 +8,16 @@
 // Da quanti millisecondi è composto un secondo?
 // Quanti millisecondi mi separano da domani alle 9:30?
 
-
-
-
 let ora = new Date().getHours();
 let minuti = new Date().getMinutes();
 let secondi = new Date().getSeconds();
 
 
+console.log(ora,minuti,secondi)
 
 
 if((ora<24)&&(ora>10)){
-    ora=(24-ora)+9
+    ora=(23-ora)+9
     console.log(ora)
     
 }else{
@@ -30,14 +28,11 @@ if((minuti<=30)&&(minuti>=0)){
     minuti=(30-minuti)
     console.log(minuti)
 }else if((minuti>30)&&(minuti<59)){
-    minuti=(60-minuti)+30
+    minuti=(59-minuti)+30
 }
 
 
-
 console.log("pausa")
-
-
 
 
 const myInterval = setInterval(function(){
@@ -56,13 +51,6 @@ const myInterval = setInterval(function(){
         secondi=secondi-1
     }
 
-
-    // if(totalesecondi>0){
-    //     totalesecondi=totalesecondi-1
-    //     console.log(totalesecondi)
-    // }else{
-    //     clearInterval()
-    // }
     console.log(ora,minuti,secondi)
 }, 1000);
 
