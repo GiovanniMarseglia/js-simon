@@ -16,45 +16,39 @@ let minuti = new Date().getMinutes();
 let secondi = new Date().getSeconds();
 
 
-let orerimanenti=0
-let minutirimanenti=0
-let secondirimanenti=60-secondi
-
 
 
 if((ora<24)&&(ora>10)){
-    orerimanenti=(24-ora)+9
-    console.log(orerimanenti)
+    ora=(24-ora)+9
+    console.log(ora)
     
 }else{
-    orerimanenti=9-ora
+    ora=9-ora
 }
 
 if((minuti<=30)&&(minuti>=0)){
-    minutirimanenti=(30-minuti)
-    console.log(minutirimanenti)
+    minuti=(30-minuti)
+    console.log(minuti)
 }else if((minuti>30)&&(minuti<59)){
-    minutirimanenti=(minuti-60)+30
+    minuti=(60-minuti)+30
 }
 
+
+
 console.log("pausa")
-
-
-
-let totalesecondi=orerimanenti+minutirimanenti+secondirimanenti
 
 
 
 
 const myInterval = setInterval(function(){
 
-    if((orerimanenti==0) && (minuti==30) && (secondi==0)){
+    if((ora==0) && (minuti==30) && (secondi==0)){
         console.log("la lezione è iniziata")
         clearInterval()
-    }else if((secondirimanenti==0)&&(minutirimanenti==0)){
-        orerimanenti=orerimanenti-1
-    }else if(secondirimanenti==0){
-        minuti=minuti-1
+    }else if((secondi==0)&&(minuti==0)){
+        ora=ora-1
+        minuti=59
+        secondi=60
     }else if(secondi==0){
         secondi=60
         minuti=minuti-1
@@ -69,7 +63,7 @@ const myInterval = setInterval(function(){
     // }else{
     //     clearInterval()
     // }
-    console.log(orerimanenti,minuti,secondi)
+    console.log(ora,minuti,secondi)
 }, 1000);
 
 
