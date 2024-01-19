@@ -15,8 +15,11 @@ let secondi = new Date().getSeconds();
 
 console.log(ora,minuti,secondi)
 
-if(ora=9){
+if((ora==9)&&(minuti<31)){
     ora=0
+}else if((ora==9)&&(minuti>31)){
+    ora=(23-ora)+9
+    console.log(ora)
 }else if((ora<24)&&(ora>9)){
     ora=(23-ora)+9
     console.log(ora)
