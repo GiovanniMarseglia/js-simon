@@ -15,8 +15,9 @@ let secondi = new Date().getSeconds();
 
 console.log(ora,minuti,secondi)
 
-
-if((ora<24)&&(ora>10)){
+if(ora=9){
+    ora=0
+}else if((ora<24)&&(ora>9)){
     ora=(23-ora)+9
     console.log(ora)
     
@@ -39,7 +40,7 @@ const myInterval = setInterval(function(){
 
     if((ora==0) && (minuti==30) && (secondi==0)){
         console.log("la lezione è iniziata")
-        clearInterval()
+        myInterval.clearInterval()
     }else if((secondi==0)&&(minuti==0)){
         ora=ora-1
         minuti=59
