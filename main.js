@@ -21,12 +21,14 @@ if((ora==9)&&(minuti<31)){
     ora=(23-ora)+9
     console.log(ora)
 }else if((ora<24)&&(ora>9)){
-    ora=(23-ora)+9
+    ora=(24-ora)+9
     console.log(ora)
     
 }else{
     ora=9-ora
 }
+
+
 
 if((minuti<=30)&&(minuti>=0)){
     minuti=(30-minuti)
