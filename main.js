@@ -34,7 +34,7 @@ if((minuti<=30)&&(minuti>=0)){
     minuti=(30-minuti)
     console.log(minuti)
 }else if((minuti>30)&&(minuti<59)){
-    minuti=(59-minuti)+30
+    minuti=(60-minuti)+30
 }
 
 
